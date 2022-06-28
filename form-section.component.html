@@ -1,0 +1,116 @@
+<h2>Resume Builder</h2>
+<div  *ngIf="!showResume" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="" id ="regForm" (submit)="saveFormData()">
+
+                <div class="row">
+                    <div class="from-group col-md-4">
+                        <label for="fname"> First Name</label>
+                        <input id="fname" type="text" name="fname" class="form-control" 
+                        [(ngModel)] = "formData.firstName">
+                    </div>
+                    
+                    <div class="from-group col-md-4">
+                        <label for="lname"> Last Name</label>
+                        <input id="lname" type="text" name="lname" class="form-control"
+                        [(ngModel)] = "formData.lastName">
+                    </div>
+
+                    <div class="from-group col-md-4">
+                        <label for="dob"> DOB </label>
+                        <input id="mname" type="DOB" name="mname" class="form-control"
+                        [(ngModel)] = "formData.middleName">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="from-group col-md-4">
+                        <label for="email"> Email</label>
+                        <input id="email" type="mail" name="email" class="form-control" 
+                         >
+                    </div>
+                    <div class="from-group col-md-4">
+                        <label for="number"> Number</label>
+                        <input id="number" type="number" name="Number" class="form-control"
+                       >
+                    </div>
+                    <div class="from-group col-md-4">
+                        <label for="address"> Address</label>
+                        <input id="address" type="address" name="Address" class="form-control"
+                       >
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Enter Educational Qualification:</h4>
+                    <table  class="tb" id="mytable">
+                        <thead>
+                            <tr>
+                                <th> Education </th>
+                                <th> School/University</th>
+                                <th> Year of Passing </th>
+                                <th> Percentage/CGPA </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td> <label> Post Graduation: </label> </td>
+                            <td> <input type="text" name="university1" id ="university1" placeholder="Enter School/University"> </td>
+                            <td> <input type="number" name="yearofpassing1" id="yearofpassing1" placeholder="Enter Year of Passing"> </td>
+                            <td> <input type="number" name="percentage1" id="percentage1" placeholder="Enter Percentage/CGPA"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label> Graduation: </label> </td>
+                            <td> <input type="text" name="university2" id="university" placeholder="Enter School/University"> </td>
+                            <td> <input type="number" name="yearofpassing2" id="yearofpassing2" placeholder="Enter Year of Passing"> </td>
+                            <td> <input type="number" name="percentage2" id="percentage2" placeholder="Enter Percentage/CGPA"> </td>
+                        </tr>
+        
+                        <tr>
+                            <td> <label> Diploma </label> </td>
+                            <td> <input type="text" name="university3" id="university3" placeholder="Enter School/University"> </td>
+                            <td> <input type="number" name="yearofpassing3" id="yearofpassing3" placeholder="Enter Year of Passing"> </td>
+                            <td> <input type="number" name="percentage3" id="percentage3" placeholder="Enter Percentage/CGPA"> </td>
+                        </tr>
+        
+                        <tr>
+                            <td> <label> Intermidate: </label> </td>
+                            <td> <input type="text" name="university3" id="university3" placeholder="Enter School/University"> </td>
+                            <td> <input type="number" name="yearofpassing3" id="yearofpassing3" placeholder="Enter Year of Passing"> </td>
+                            <td> <input type="number" name="percentage3" id="percentage3" placeholder="Enter Percentage/CGPA"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label> High School: </label> </td>
+                            <td> <input type="text" name="university4" id="university4" placeholder="Enter School/University"> </td>
+                            <td> <input type="number" name="yearofpassing4" id="yearofpassing4" placeholder="Enter Year of Passing"> </td>
+                            <td> <input type="number" name="percentage4" id="percentage4" placeholder="Enter Percentage/CGPA"> </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <label for="mname"> Experience</label>
+                        <input id="experience" type="text" name="experience" class="form-control"
+                        [(ngModel)] = "formData.middleName">
+                      </div>
+                      <div class="col">
+                        <label for="mname">Description</label>
+                        <input id="description" type="text" name="description" class="form-control"
+                        [(ngModel)] = "formData.middleName">
+                      </div>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success m-2">Submit</button>
+                    <button type="reset" class="btn btn-warning m-2">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<app-resume *ngIf="showResume" ></app-resume>

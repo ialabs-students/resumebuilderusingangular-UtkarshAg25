@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-sm bg-dark">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">{{home}}</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#abcd" href="#" >{{services}}</a>
+            <div class="dropdown-menu" id="abcd"> 
+                <a class="dropdown-item" *ngFor="let option of servicesDropdown"> {{option}} </a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">{{reports}}</a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" [href]="google">Google</a>
+        </li> -->
+
+        <li class="nav-item float-right" style="display: flex;">
+            <img [src]="loginImg" width="30" height="30" style="margin-top: 5px;" >
+            <a class="nav-link" (click)="onLoginClicked($event)" href="#">{{menuLogin}}</a>
+        </li>
+
+        <li class="nav-item">
+            <input type="text" [(ngModel)]="searchData"/>
+            <button class="btn btn-primary m-1" (click)="search()" >Search</button>
+        </li>
+    </ul>
+</nav>
